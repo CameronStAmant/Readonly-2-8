@@ -40,10 +40,6 @@ type MyReadonly2<T, K extends keyof T = keyof T> = {
       [P in keyof T as P extends K ? never : P]: T[P]
 }
 
-
-type a = MyReadonly2<Todo1, 'title' | 'description'>;
-//  ^?
-
 /* _____________ Test Cases _____________ */
 import type { Alike, Expect } from '@type-challenges/utils'
 
